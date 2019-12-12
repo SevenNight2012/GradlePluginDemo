@@ -78,8 +78,7 @@ class PrintTimeCast extends Transform {
                     jarName = jarName.substring(0, jarName.length() - 4)
                 }
 
-                def dest = outputProvider.getContentLocation(jarName + md5Name,
-                        jarInput.contentTypes, jarInput.scopes, Format.JAR)
+                def dest = outputProvider.getContentLocation(jarName + md5Name, jarInput.contentTypes, jarInput.scopes, Format.JAR)
 //                println "JarName >>> " + jarName
                 FileUtils.copyFile(jarInput.file, dest)
             }
